@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	int		i;
+	unsigned char	*destt;
+	unsigned char	*srcc;
+
+	destt = (unsigned char *)dest;
+	srcc = (unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		destt[i] = srcc[i];
+		i++;
+	}
+	return (dest);
+}
