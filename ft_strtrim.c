@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 
 static int	char_in_set(char const c, char const *set)
 {
