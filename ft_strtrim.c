@@ -27,7 +27,7 @@ static int	ft_strlen(char const *s)
 char	*ft_strtrim(char const *s, char const *set)
 {
 	int	i;
-	int	j;
+	int	start;
 	int	k;
 	char	*res;
 
@@ -35,17 +35,17 @@ char	*ft_strtrim(char const *s, char const *set)
 	k = 0;
 	while (s[i] && (char_in_set(s[i], set) == 1))
 		i++;
-	j = i;
+	start = i;
 	i = (ft_strlen(s) - 1);
 	while (s[i] && char_in_set(s[i], set))
 		i--;
 	res = malloc(sizeof(char) * (i - j + 1));
 	if (!res)
 		return (NULL);
-	while (j <= i)
+	while (start <= i)
 	{
-		res[k] = s[j];
-		j++;
+		res[k] = s[start];
+		start++;
 		k++;
 	}
 	res[k] = '\0';
