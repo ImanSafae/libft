@@ -20,7 +20,7 @@ static int	intlen(int n)
 	return (count);
 }
 
-char	*int_max_or_min(int n)
+static char	*int_max_or_min(int n)
 {
 	if (n == -2147483648)
 		return ("-2147483648");
