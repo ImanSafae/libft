@@ -1,9 +1,9 @@
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
-	int	i;
+	size_t	i;
 
 	i = 0;
 	str = (char *)s;

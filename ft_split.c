@@ -18,17 +18,7 @@ static int	count_strings(char const *string, char sep)
 	return (count);
 }
 
-static int	ft_strlen(char *str)
-{
-	int	lenght;
-	
-	length = 0;
-	while (str[length])
-		length++;
-	return (length);
-}
-
-static char	**malloc_tab(char **tab, char *str, char sep, int nb_of_strings)
+static char	**malloc_tab(char **tab, const char *str, char sep, int nb_of_strings)
 {
 	int	i_tab;
 	int	i_str;
@@ -44,16 +34,16 @@ static char	**malloc_tab(char **tab, char *str, char sep, int nb_of_strings)
 			str_length++;
 			i_str++;
 		}
-		tab[i_tab] = malloc(sizeof(char) * (str_length + 1)) 
+		tab[i_tab] = malloc(sizeof(char) * (str_length + 1)); 
 		i_tab++;
 		str_length = 0;
 		if (str[i_str] == sep)
 			i_str++;
 	}
-	return (tab)
+	return (tab);
 }
 
-static char	**fill_tab(int nb_of_strings, char **tab, char *s, char sep)
+static char	**fill_tab(int nb_of_strings, char **tab, const char *s, char sep)
 {
 	int	i;
 	int	j;
@@ -93,8 +83,8 @@ char	**ft_split(char const *s, char sep)
 	j = 0;
 	k = 0;
 	nb_of_strings = count_strings(s, sep);
-	s = ft_strtrim(s, sep);
-	tab = malloc(sizeof(char *) * (nb_of_strings + 1)
+	s = ft_strtrim(s, &sep);
+	tab = malloc(sizeof(char *) * (nb_of_strings + 1));
 	tab = malloc_tab(tab, s, sep, nb_of_strings);
 	tab = fill_tab(nb_of_strings, tab, s, sep);
 	return (tab);

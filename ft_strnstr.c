@@ -2,9 +2,9 @@
 
 char	*ft_strnstr(char *s1, char *s2, size_t n)
 {
-	int	i;
-	int	j;
-	int	k;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	j = 0;

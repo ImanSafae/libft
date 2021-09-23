@@ -2,10 +2,10 @@
 
 size_t	ft_strlcpy(char *dst, char *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (!n || !src[i] || !dest[i])
+	if (!n || !src[i] || !dst[i])
 		return (ft_strlen(src));
 	while ((i < (n - 1)) && dst[i] && src[i])
 	{

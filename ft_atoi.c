@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 		return (INT_MIN);
 	else if (ft_strcmp(str, "2147483647") == 0)
 		return (INT_MAX);
-	if (str[i] == "-")
+	if (str[i] == '-')
 	{
 		sign = -1;
 		i++;

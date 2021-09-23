@@ -2,7 +2,7 @@
 
 size_t	strlcat(char *dst, const char *src, size_t size)
 {
-	int	dst_len;
+	size_t	dst_len;
 	int	to_append;
 	int	i;
 	int	j;
