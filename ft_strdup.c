@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_strlen(const char *str)
 {
@@ -29,9 +28,4 @@ char	*ft_strdup(const char *s)
 	}
 	res[i] = '\0';
 	return (res);
-}
-
-int main()
-{
-	printf("%s\n", ft_strdup(0));
 }

@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "libft.h"
 
 static int	char_in_set(char const c, char const *set)
 {
@@ -12,16 +12,6 @@ static int	char_in_set(char const c, char const *set)
 		index++;
 	}
 	return (0);
-}
-
-static int	ft_strlen(char const *s)
-{
-	int	count;
-
-	count = 0;
-	while (s[count])
-		count++;
-	return (count);
 }
 
 char	*ft_strtrim(char const *s, char const *set)

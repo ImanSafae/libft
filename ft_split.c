@@ -1,6 +1,6 @@
-#include <stdlib.h>
+#include "libft.h"
 
-int	count_strings(char const *string, char sep)
+static int	count_strings(char const *string, char sep)
 {
 	int	i;
 	int	count;
@@ -18,7 +18,7 @@ int	count_strings(char const *string, char sep)
 	return (count);
 }
 
-int	ft_strlen(char *str)
+static int	ft_strlen(char *str)
 {
 	int	lenght;
 	
@@ -28,7 +28,7 @@ int	ft_strlen(char *str)
 	return (length);
 }
 
-char	**malloc_tab(char **tab, char *str, char sep, int nb_of_strings)
+static char	**malloc_tab(char **tab, char *str, char sep, int nb_of_strings)
 {
 	int	i_tab;
 	int	i_str;
@@ -53,7 +53,7 @@ char	**malloc_tab(char **tab, char *str, char sep, int nb_of_strings)
 	return (tab)
 }
 
-char	**fill_tab(int nb_of_strings, char **tab, char *s, char sep)
+static char	**fill_tab(int nb_of_strings, char **tab, char *s, char sep)
 {
 	int	i;
 	int	j;

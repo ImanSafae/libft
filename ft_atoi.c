@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <limits.h>
+#include "libft.h"
 
 static int	ft_strcmp(const char *s1, char *s2)
 {
@@ -36,10 +35,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (res * sign);
-}
-
-int main()
-{
-	printf("%d", ft_atoi("-5464"));
-	return (0);
 }
