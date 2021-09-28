@@ -4,7 +4,7 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list  *pointer;
   
-	pointer = *alst->next;
+	pointer = *alst;
 	if (!*alst)
 		return ;
 	while (pointer != NULL)
