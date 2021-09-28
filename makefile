@@ -16,14 +16,14 @@ FLAGS = -Wall -Wextra -Werror
 
 all:	${NAME}
 
-bonus:	${OBJS_BONUS}
+bonus:	${OBJS_BONUS} ${OBJS}
 	ar rc ${NAME} ${OBJS_BONUS}
 
 ${NAME}:${OBJS}
 	ar rc ${NAME} ${OBJS}
 
 clean:
-	rm -f ${OBJS}
+	rm -f ${OBJS} ${OBJS_BONUS}
 
 fclean:	clean
 	rm -f ${NAME}
