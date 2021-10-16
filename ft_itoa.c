@@ -23,11 +23,9 @@ static int	intlen(int n)
 static char	*int_max_or_min(int n)
 {
 	if (n == -2147483648)
-		return ("-2147483648");
-	else if (n == 2147483647)
-		return ("2147483647");
+		return ft_strdup("-2147483648");
 	else
-		return (NULL);
+		return ft_strdup("2147483647");
 }
 
 char	*ft_itoa(int n)
@@ -37,11 +35,11 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648 || n == 2147483647)
 		return (int_max_or_min(n));
-	else if (n == 0)
-		return ("0");
 	res = malloc(sizeof(char) * (intlen(n) + 1));
 	if (!res)
 		return (NULL);
+	if (n == 0)
+		res[0] = '0';
 	i = intlen(n);
 	if (n < 0)
 	{

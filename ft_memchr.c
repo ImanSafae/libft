@@ -9,7 +9,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	to_find = (unsigned char)c;
 	str = (unsigned char *)s;
-
 	while (i < n)
 	{
 		if (str[i] == to_find)

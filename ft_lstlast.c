@@ -2,14 +2,14 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *pointer;
-  
+	t_list	*pointer;
+
 	if (!lst)
 		return (NULL);
 	pointer = lst->next;
-	while (pointer != NULL)
+	while (pointer->next != NULL)
 	{
-		pointer = pointer->next; 
+		pointer = pointer->next;
 	}
 	return (pointer);
 }
