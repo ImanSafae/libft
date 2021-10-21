@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itaouil <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/18 11:06:47 by itaouil           #+#    #+#             */
+/*   Updated: 2021/10/18 12:00:04 by itaouil          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_strcmp(const char *s1, const char *s2)
@@ -29,17 +41,17 @@ int	ft_atoi(const char *str)
 	i = 0;
 	res = 0;
 	sign = 1;
-	if ((ft_strcmp(str, "-2147483648") == 0) || (ft_strcmp(str, "2147483647") == 0))
+	if ((ft_strcmp(str, "-2147483648") == 0) \
+			|| (ft_strcmp(str, "2147483647") == 0))
 		return (int_max_or_min(str));
 	while (str[i] && ((str[i] > 8 && str[i] < 14) || str[i] == ' '))
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		sign = -1;
+		if (str[i] == '-')
+			sign = -1;
 		i++;
 	}
-	else if (str[i] == '+')
-		i++;
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10;

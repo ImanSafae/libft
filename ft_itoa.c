@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itaouil <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/18 11:08:59 by itaouil           #+#    #+#             */
+/*   Updated: 2021/10/18 11:24:29 by itaouil          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	intlen(int n)
@@ -23,15 +35,15 @@ static int	intlen(int n)
 static char	*int_max_or_min(int n)
 {
 	if (n == -2147483648)
-		return ft_strdup("-2147483648");
+		return (ft_strdup("-2147483648"));
 	else
-		return ft_strdup("2147483647");
+		return (ft_strdup("2147483647"));
 }
 
 char	*ft_itoa(int n)
 {
 	char	*res;
-	int	i;
+	int		i;
 
 	if (n == -2147483648 || n == 2147483647)
 		return (int_max_or_min(n));
